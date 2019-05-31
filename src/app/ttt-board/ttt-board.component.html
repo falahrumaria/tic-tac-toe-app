@@ -1,0 +1,14 @@
+<div>
+  <button (click)="ngOnInit()">submit</button>
+</div>
+<div *ngFor="let row of board; let i = index">
+  <button
+    *ngFor="let col of board[i]; let j = index"
+    class="button"
+    (click)="selectCell(i, j)"
+    [class.button-red]="board[i][j] === RED"
+    [class.button-blue]="board[i][j] === BLUE"
+  ></button>
+</div>
+<p>{{ currentStateMessage }}</p>
+<p *ngIf="errorMessage">{{ errorMessage }}</p>

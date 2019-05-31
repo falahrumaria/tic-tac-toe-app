@@ -1,0 +1,10 @@
+<div>
+  <p>Please input board dimension:</p>
+  <label
+    >dimension:
+    <input placeholder="size of board" [(ngModel)]="dimension" />
+  </label>
+</div>
+<div>
+  <app-ttt-board [dimension]="dimension"></app-ttt-board>
+</div>
